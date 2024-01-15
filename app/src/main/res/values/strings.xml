@@ -1,4 +1,24 @@
 <resources>
     <string name="app_name">BetManager</string>
     <string name="title_activity_bet">BetActivity</string>
+    <string name="criar_aposta">Criar aposta</string>
+    <string name="titulo">Título</string>
+    <string name="em_progresso">Em progresso</string>
+    <string name="green">Green</string>
+    <string name="red">Red</string>
+    <string name="meio_green">Meio green</string>
+    <string name="meio_red">Meio red</string>
+    <string name="reembolso">Reembolso</string>
+    <string name="status">Status</string>
+    <string name="bet365">Bet365</string>
+    <string name="betano">Betano</string>
+    <string name="casa_de_aposta">Casa de aposta</string>
+    <string name="descricao">Descrição</string>
+    <string name="stake">Stake</string>
+    <string name="odds">Odds</string>
+    <string name="futebol">Futebol</string>
+    <string name="basquete">Basquete</string>
+    <string name="esporte">Esporte</string>
+    <string name="aposta_cadastrada_com_sucesso">Aposta cadastrada com sucesso!</string>
+    <string name="adicionar_aposta">Adicionar aposta</string>
 </resources>

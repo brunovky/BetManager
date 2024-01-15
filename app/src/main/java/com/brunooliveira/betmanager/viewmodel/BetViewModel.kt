@@ -5,6 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.brunooliveira.betmanager.R
 import com.brunooliveira.betmanager.data.repository.BetRepository
 import com.brunooliveira.betmanager.model.Bet
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -61,6 +62,16 @@ class BetViewModel @Inject constructor(
         bet = bet.copy(
             sport = sport
         )
+    }
+
+    fun validateFields(): Int? {
+        return when {
+            bet.title.isEmpty() -> R.string.erro_titulo
+            bet.description.isEmpty() -> R.string.erro_descricao
+            bet.stake <= 0.0 -> R.string.erro_stake
+            bet.odds <= 1.0 -> R.string.erro_odds
+            else -> null
+        }
     }
 
     fun addBet() = viewModelScope.launch {

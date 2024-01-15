@@ -21,4 +21,8 @@
     <string name="esporte">Esporte</string>
     <string name="aposta_cadastrada_com_sucesso">Aposta cadastrada com sucesso!</string>
     <string name="adicionar_aposta">Adicionar aposta</string>
+    <string name="erro_titulo">Por favor, digite o título.</string>
+    <string name="erro_descricao">Por favor, digite a descrição.</string>
+    <string name="erro_stake">Por favor, digite uma stake válida.</string>
+    <string name="erro_odds">Por favor, digite uma odd válida.</string>
 </resources>

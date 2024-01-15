@@ -172,12 +172,25 @@ fun Screen(
                     viewModel::updateOdds,
                     viewModel::updateSport
                 ) {
-                    viewModel.addBet()
-                    scope.launch {
-                        snackbarHostState.showSnackbar(
-                            message = ContextCompat.getString(mContext, R.string.aposta_cadastrada_com_sucesso),
-                            duration = SnackbarDuration.Short
-                        )
+                    val result = viewModel.validateFields()
+                    if (result != null) {
+                        scope.launch {
+                            snackbarHostState.showSnackbar(
+                                message = ContextCompat.getString(mContext, result),
+                                duration = SnackbarDuration.Short
+                            )
+                        }
+                    } else {
+                        viewModel.addBet()
+                        scope.launch {
+                            snackbarHostState.showSnackbar(
+                                message = ContextCompat.getString(
+                                    mContext,
+                                    R.string.aposta_cadastrada_com_sucesso
+                                ),
+                                duration = SnackbarDuration.Short
+                            )
+                        }
                     }
                 }
             }

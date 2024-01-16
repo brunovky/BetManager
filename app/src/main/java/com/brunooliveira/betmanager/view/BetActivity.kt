@@ -61,7 +61,7 @@ class BetActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Screen()
+            BetScreen()
         }
     }
 }
@@ -69,7 +69,7 @@ class BetActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
-fun ScreenPreview() {
+fun BetScreenPreview() {
     val mContext = LocalContext.current
 
     BetManagerTheme {
@@ -120,7 +120,7 @@ fun ScreenPreview() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Screen(
+fun BetScreen(
     viewModel: BetViewModel = hiltViewModel()
 ) {
     val mContext = LocalContext.current

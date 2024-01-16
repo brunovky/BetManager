@@ -14,9 +14,8 @@
         android:theme="@style/Theme.BetManager"
         tools:targetApi="31">
         <activity
-            android:name=".view.BetActivity"
+            android:name=".view.MainActivity"
             android:exported="true"
-            android:label="@string/title_activity_bet"
             android:theme="@style/Theme.BetManager">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.BetActivity" />
     </application>
 
 </manifest>

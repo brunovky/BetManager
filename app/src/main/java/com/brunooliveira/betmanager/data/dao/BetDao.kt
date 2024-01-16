@@ -7,12 +7,14 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import com.brunooliveira.betmanager.model.Bet
+import com.brunooliveira.betmanager.util.Bets
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface BetDao {
 
     @Query("SELECT * FROM bet ORDER BY date DESC")
-    fun getBets(): List<Bet>
+    fun getBets(): Flow<Bets>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addBet(bet: Bet)

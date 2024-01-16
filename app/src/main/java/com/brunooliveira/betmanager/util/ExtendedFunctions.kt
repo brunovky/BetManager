@@ -18,7 +18,9 @@ import kotlin.coroutines.EmptyCoroutineContext
 
 typealias Bets = List<Bet>
 
-fun Date.format(): String = SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault()).format(this)
+fun Date.format(pattern: String = "dd/MM/yyyy HH:mm:ss") = SimpleDateFormat(pattern, Locale.getDefault()).format(this)
+
+fun String.toDate(pattern: String = "dd/MM/yyyy HH:mm:ss") = SimpleDateFormat(pattern, Locale.getDefault()).parse(this)!!
 
 fun Context.getActivity(): AppCompatActivity? = when (this) {
     is AppCompatActivity -> this

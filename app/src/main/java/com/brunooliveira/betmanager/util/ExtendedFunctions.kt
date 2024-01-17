@@ -27,14 +27,3 @@ fun Context.getActivity(): AppCompatActivity? = when (this) {
     is ContextWrapper -> baseContext.getActivity()
     else -> null
 }
-
-@Composable
-fun Flow<List<Bet>>.asState(
-    context: CoroutineContext = EmptyCoroutineContext
-): State<List<Bet>> = produceState(emptyList<Bet>(), this, context) {
-    if (context == EmptyCoroutineContext) {
-        collect { value = it }
-    } else withContext(context) {
-        collect { value = it }
-    }
-}

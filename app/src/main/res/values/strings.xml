@@ -25,4 +25,7 @@
     <string name="erro_descricao">Por favor, digite a descrição.</string>
     <string name="erro_stake">Por favor, digite uma stake válida.</string>
     <string name="erro_odds">Por favor, digite uma odd válida.</string>
+    <string name="casa">Casa</string>
+    <string name="emoji_triste">:(</string>
+    <string name="placeholder_main">Você ainda não criou apostas. \nCrie sua primeira aposta agora mesmo!</string>
 </resources>

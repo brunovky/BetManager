@@ -1,5 +1,6 @@
 package com.brunooliveira.betmanager.viewmodel
 
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.lifecycle.ViewModel
 import com.brunooliveira.betmanager.data.repository.BetRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -12,4 +13,9 @@ class MainViewModel @Inject constructor(
 
     val bets = repository.getBets()
 
+    var currentContent = mutableIntStateOf(MAIN_CONTENT)
+
 }
+
+const val MAIN_CONTENT = 0
+const val DASHBOARD_CONTENT = 1
